@@ -1,0 +1,16 @@
+*.py[cod]
+.project
+.pydevproject
+.installed.cfg
+bin
+develop-eggs
+dist
+downloads
+eggs
+parts
+src/*.egg-info
+pip-log.txt
+*.so
+/.settings
+.idea
+*.mo

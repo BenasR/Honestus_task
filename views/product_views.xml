@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="product_normal_form_view_honestus_price_code">
+            <field name="name">product.product.honestus.price.code</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='default_code']" position="after">
+                    <field name="honestus_code" attrs="{'required': [('default_code', '!=', '')] }"/>
+                </xpath>
+                <xpath expr="//field[@name='lst_price']" position="after">
+                    <field name="honestus_price" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
